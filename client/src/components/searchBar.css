@@ -1,0 +1,17 @@
+.search-bar{
+    margin-top: 45px;
+}
+
+.button-search{
+    border-color: gray;
+    background-color: black;
+    color: white    ;
+    border-width: 1px;
+    font-family: cursive
+}
+
+.input-search{
+    border-width: 1px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.199);
+}
