@@ -4,34 +4,42 @@
 }
 
 .card{
-    width: 350px;
+    width: 312px;
     height: 380px;
-    background-color: rgba(148, 107, 60, 0.644);
-    border-radius: 20px;
 
 }
 .name{
-    width: 350px;
+    text-align: center;
+    padding-top: -1;
+    margin: 0px;
     height: 42px;
     text-align: center;
-    padding-top: 10px;
-    color: rgb(167 233 233);
+    color: white;
     font-size: fantasy;
+    font-family: cursive;
+    background-color: rgb(245 29 3);
 }
 
-.img{
-    margin-top: 20px;
-
+.name:hover{
+    background-color: #28df07ea;
+    transition: 0.5s;
+}
+.img {
+    margin-bottom: -3px;
 }
 
-
+.ul{
+    padding-left: -40px;
+}
 .detail{
-    font-size: medium;
-    height: 31px;
-    margin-right: 35px;
-    border-radius: 20px;
-    font-family: fantasy;
-    font-weight: bolder;
-    color: rgb(36 46 36);
-
+    color: white;
+    background-color: black;
+    border-color: red;
+    border-width: 2px;
+    border: groove;
+    margin: 0px;
+    border-inline-start-style: inherit;
+    border-color: red;
+    border-block-start-style: inherit;
 }
+

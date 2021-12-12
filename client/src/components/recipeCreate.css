@@ -1,6 +1,99 @@
 #container-create{
-    background-image: url(https://i.pinimg.com/originals/ee/9c/c3/ee9cc3f33bbea2a9b059b899104a2a7b.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2020/03/21/18/15/chili-4954855_960_720.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     height: 636px;
+    text-align: center;
 }
+
+.style-form{
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    background: #0a0b0c66;
+}
+
+#button-back{
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        width: 200px;
+        height: 30px;
+        position: relative;
+        color: white;
+        text-decoration: none;
+        background-color: black;
+        border-block-color: black;
+        border-color: black;
+}
+#button-back:hover{
+    transition: 0.5s;
+    font-size: 50px;
+}
+
+#title{
+    text-decoration: overline;
+    color: rgb(106 153 50);
+    font-family: ui-serif;
+    font-weight: revert;
+}
+
+.danger{
+    background-color: crimson;
+}
+
+.error{
+    color: red;
+    font-size: 10px;
+}
+
+#select-style{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#button-create:disabled{
+    background: #ccc;
+    border-color: #ccc;
+    text-decoration: line-through;
+}
+#button-create{
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #28df07ea;
+    text-align: center;
+    font-size: revert;
+    display: inline-block;
+    color:white;
+    font-family: Arial;
+    border-color: #28df07ea;
+    margin-bottom: 20px;
+}
+
+
+  /* #button-create:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.63),0 17px 50px 0 rgba(0,0,0,0.63);
+  } */
+
+  #select{
+    width: 180.67px;
+    text-align: center;
+    height: 19.33px;
+  }
+
+  #style-type{
+      font-size: 15px;
+      color: yellowgreen;
+      margin-bottom: 1px;
+  }
+
+  #button-type{
+    font-size: 10px;
+
+  }
+
+  #container-detailType{
+    width: 200px;
+    background-color: #0a0b0c66;
+    margin-left: 30%;
+  }

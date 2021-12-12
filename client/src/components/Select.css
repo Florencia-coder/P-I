@@ -1,0 +1,27 @@
+.select{
+  font-family: serif;
+  border-width: 0.05px;
+  width: 180px;
+  height: 25px;
+  text-align: center;
+  background-color: rgb(0 0 0 / 13%);
+  color: black;
+  border-color: black;
+  margin-right: 100px;
+  border-inline-start-style: inherit;
+  border-block-end-style: inherit;
+  border-width: 3px;
+  }
+
+.select:hover{
+  color:#0f4c0b;
+  border-color:  #0f4c0b;
+  transition-property: opacity, left, top, height;
+  transition-duration: 10s, 5s;
+}
+
+.style-option{
+  background-color:transparent;
+  color:black
+}
+

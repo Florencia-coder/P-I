@@ -1,0 +1,98 @@
+#container-detail{
+    background-color: black;
+}
+
+#name-detail{
+    margin-top: 0px;
+    color: white;
+    font-style: italic;
+    padding-top: 20px;
+    font-family: ui-serif;
+    font-weight: revert;
+    text-decoration-line: overline;
+}
+
+#image-detail{
+    border-radius: 10px;
+}
+
+#summary{
+    padding-left: 15px;
+    font-family: ui-rounded;
+    color: dimgrey;
+    padding-right: 15px;    
+}
+
+#type-diets{
+    color:dimgrey;
+    font-family: ui-rounded;
+
+}
+
+#points{
+    color: dimgrey;
+    font-family: ui-rounded;
+}
+
+#title-det{
+    color:dimgrey;
+    font-family: ui-rounded;
+}
+
+.diets{
+    color: dimgrey;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: ui-rounded;
+}
+
+#loading{
+    border-top: 0px;
+    height: 636px;
+    color: dimgrey;
+    font-family: ui-rounded;
+}
+
+.title-step{
+    color: dimgrey;
+    font-family: ui-rounded;
+}
+
+/* #back-button{
+    border-color: black;
+    font-size: x-large;
+    color: white;
+    background-color: black;
+}
+#back-button:hover{
+    color:chartreuse
+} */
+
+#back-button{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-block-color: black;
+    border-color: black;
+}
+
+#back-button:hover{
+    transition: 0.5s;
+    font-size: 50px;
+}
+
+#container-detail{
+    width: 800px;
+    margin-left: 18%;
+    text-align: unset;
+}
+
+#PP{
+    background-image: url(https://st3.depositphotos.com/1820901/12871/i/950/depositphotos_128713440-stock-photo-vegetable-background-with-copy-space.jpg);
+}

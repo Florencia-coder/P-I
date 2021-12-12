@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react' ; 
 import {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getRecipes, filterRecipesByTypes, orderByName, orderByPoints} from '../actions/index.js';
+import {getRecipes, filterRecipesByTypes, orderByName, orderByPoints, filterByHealty} from '../actions/index.js';
 import {Link} from 'react-router-dom';
 import Card from './Card';
 import Paged from './Paged.jsx';
 import SearchBar from './SearchBar.jsx';
+import Select from './Select.jsx';
 import './home.css';
 
 export default function Home(){
@@ -31,6 +32,7 @@ export default function Home(){
 
     function handleFilterValue(e){
         dispatch(filterRecipesByTypes(e.target.value))
+
     }
 
     function handleSortName(e){
@@ -45,46 +47,62 @@ export default function Home(){
         setOrdenPoints(`Ordenado ${e.target.value}`)
     }
 
+
+    function handleSortHealty(e){
+        dispatch(filterByHealty(e.target.value))
+        console.log(e.target.value)
+    }
+
     return(
         
-        <div className='home'>
-            <div className='container-home'>
-            <div className='createdRecipe'>
-                <div className="middle">
-            <Link className="btn btn1"to='/recipe'>Create Your Recipe!</Link>
-               </div>
-            </div>
-            <h1 className='recipes'>RECIPES</h1>
-            <div className='container_bar'>
-            <select className='select select-1' onChange={e=>handleSortName(e)}>
-                    <option value="asc">Name-Upward</option>
-                    <option value="desc">Name-Falling</option>
-                </select>
-                <select className='select select-2' onChange={e=>handleSortPoints(e)}>
-                    <option value="Z-A">Points-Upward</option>
-                    <option value="A-Z">Points-FAlling</option>
-                </select>
-                <select className='select select-3' onChange={e=> handleFilterValue(e)}>
-                    <option value="gluten free">Gluten Free</option>
-                    <option value="dairy free">Dairy Free</option>
-                    <option value="lacto ovo vegetarian">Lacto Ovo Vegetarian</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="paleolithic">Paleolithic</option>
-                    <option value="primal">Primal</option>
-                    <option value="pescatarian">Pescatarian</option>
-                    <option value="fodmap friendly">Fodmap Friendly</option>
-                    <option value="whole 30">Whole 30</option>
-                </select>
-                <SearchBar/>
+    <div className='home'>
+        <div className='container-home'>
+                <div className='container_bar'>
+
+                    <Select 
+                    cb={e=>handleSortName(e)} 
+                    arrValue={['asc', 'desc']} 
+                    arrName={['Name-Ascendent','Name-Descendent']}
+                    />
+
+                    <Select
+                    cb={e=>handleSortPoints(e)}
+                    arrValue={["Z-A","A-Z"]}
+                    arrName={['Points-Ascendent','Points-Descendent']}
+                    />
+
+                    <Select
+                    cb={e=>handleSortHealty(e)}
+                    arrValue={["Healty-Asc","Healty-Desc"]}
+                    arrName={['HealtyLevel-Ascendent', 'HealtyLevel-Descendent']}
+                    />
+
+                    <Select
+                    cb={e=> handleFilterValue(e)}
+                    arrValue={['gluten free', 'dairy free', 'lacto ovo vegetarian', 'vegan', 'paleolithic', 'primal', 'pescatarian', 'fodmap friendly', 'whole 30']}
+                    arrName={['Gluten Free', 'Dairy Free', 'Lacto Ovo Vegetarian', 'Vegan', 'Paleolithic', 'Primal', 'Pescatarian', 'Fodmap Friendly', 'Whole 30']}
+                    />
+
                 </div> 
-            </div>
+                <div id='container-title'>
+                <h1 className='recipes'>FIND THE BEST FOOD RECIPES HERE!</h1>
+                <h5 id='resume'>Welcome to the page with the best food recipes, a wide variety of healthy dishes, meats, fish, desserts, and more, where we include all the nutritional data in the detail of each recipe. We also give you the facility to search for the desired recipe by filtering it and also to create your own recipe!</h5>
+                <div className="middle">
+                    <Link className="btn btn1"to='/recipe'>Create Your Recipe!</Link>
+               </div>
+                </div>
+            <SearchBar/>
+        </div>
 
             <div>
-                <Paged recipePerPage={recipePerPage} allRecipes={allRecipes.length} Paginado={Paginado}s/>
+                <Paged recipePerPage={recipePerPage} 
+                allRecipes={allRecipes.length} 
+                Paginado={Paginado}
+                />
                 
                     <div className='container'>
                     {
-                    currentRecipe?.map((c,i)=>{
+                    currentRecipe?.map((c,i)=>{ 
                         return(
                             
                             <Fragment>

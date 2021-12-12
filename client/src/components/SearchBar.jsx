@@ -17,7 +17,7 @@ export default function SearchBar(){
     function handleSubmit(e){
         e.preventDefault()
         dispatch(getNameRecipe(name))
-        setName("")
+        setName('')
     }
 
     return(
@@ -28,8 +28,7 @@ export default function SearchBar(){
             placeholder= 'Search...'
             onChange={e=>handleInputChange(e)}
             />
-            <button className='button-search' type='submit' onClick={e=>handleSubmit(e)}>search</button>
-
+            <button className='button-search' type='submit' onClick={e=>handleSubmit(e)}>SEARCH</button>
         </div>
     )
 }

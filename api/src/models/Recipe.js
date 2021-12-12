@@ -5,8 +5,8 @@ module.exports = (sequelize) => {
   // defino el modelo
   return sequelize.define('Recipe', {
     ID:{
-      type: DataTypes.UUID, //nro random con letras y nros que no se repiten
-      defaultValue: DataTypes.UUIDV4,   //Le damos un valor por default
+      type: DataTypes.UUID, 
+      defaultValue: DataTypes.UUIDV4,   
       allowNull:false,
       primaryKey: true
     },
@@ -30,10 +30,5 @@ module.exports = (sequelize) => {
       type: DataTypes.TEXT,
       allowNull:true
     },
-    CreatedInDb:{
-      type: DataTypes.BOOLEAN,
-      allowNull:false,
-      defaultValue:true
-    }
   });
 };

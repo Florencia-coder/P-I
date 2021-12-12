@@ -3,15 +3,18 @@
 }
 
 .button-search{
-    border-color: gray;
-    background-color: black;
-    color: white    ;
-    border-width: 1px;
-    font-family: cursive
+    height: 23px;
+    border-color: #0a0a0a;
+    background-color: rgba(0, 0, 0, 0.199);
+    color: black;
+    border-width: 0.1px;
+    font-family: system-ui;
+    font-weight: 900;
 }
 
 .input-search{
     border-width: 1px;
-    width: 400px;
     background-color: rgba(0, 0, 0, 0.199);
+    color: white;
+    height: 20px;
 }

@@ -1,15 +1,15 @@
 .home{
     font-family: sans-serif ;
-    background-image: url(https://i.pinimg.com/736x/ff/27/b5/ff27b5f542bfdb3c9fa30151f381d371.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
     padding-top: 30px;
+    background-color: black;
 }
 .recipes{
-    font-family: initial;
-    color: #7c0202;
-    font-weight: revert;
-    text-shadow: 0px 0px 9px #d5dbe3;
+  font-family: ui-serif;
+  color: #070707;
+  font-weight: revert;
+  text-decoration-line: overline;
+  margin-top: 40px;
+  padding-top: 30px;
 
 }
 .link{
@@ -19,9 +19,7 @@
     width: 350px;
 }
 
-.createdRecipe{
-    padding-top: 60px;
-}
+
 
 .linkCreated{
     text-decoration: none;
@@ -48,33 +46,39 @@
 }
 
 .container-home{
+    padding-top: 30px;
     height: 450px;
-    background-color: rgb(173 31 21 / 24%);
-
+    background-image: url(https://media.istockphoto.com/photos/large-panoramic-collection-fruits-vegetables-and-berries-picture-id1224407569?b=1&k=6&m=1224407569&s=170667a&w=0&h=ElXAcS0IzytPXhWqQ2oKPmMOvLQ1FKI-d1s5QtEB7lk=);
+    background-repeat: no-repeat;
+    background-size:cover
 }
 
 .middle{
-    position: absolute;
-    top: 35%;
-    left: 50%;
+  margin-top:40px;
+    margin-left: 50%;
     transform: translate(-50%,-50%);
   }
-  .btn{
-    position: relative;
+  .btn {
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    margin-left: 150px;
+    width: 200px;
+    height: 30px; 
+    position: relative; 
     display: block;
-    color: white;
-    font-size: 14px;
+    color: black;
+    font-size: 1;
     font-family: "montserrat";
     text-decoration: none;
-    margin: 30px 0;
-    border: 2px solid #ff7675;
-    padding: 14px 60px;
-    text-transform: uppercase;
+    border: 2px solid;
     overflow: hidden;
     transition: 1s all ease;
-  }
+    border-block-start-style: inherit;
+    border-inline-start-style: inherit;
+}
   .btn::before{
-    background: #ff7675;
+    background: #c10000;
     content: "";
     position: absolute;
     top: 50%;
@@ -94,31 +98,21 @@
   }
 
   .container_bar{
-    margin-top: 15%;
+    padding-left: 90px;
 
   }
 
-  .select{
-    border-width: initial;
-    width: 180px;
-    height: 25px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgb(173 31 21 / 24%);
-    color: aliceblue;
-    border-color: aliceblue;
-  }
-
-  .select-1{
-    margin-left: 50px;
-  }
-
-  .select-2{
-    margin-left: 280px;
-    margin-right: 280px;
-  }
-
-  .select-3{
-    margin-right: 50px;
-  }
-
+#resume{
+  font-size: unset;
+    color: #000000;
+    font-family: math;
+    text-align: -webkit-left;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+#container-title{
+  margin-left: 130px;
+  width: 80%;
+  background-color: #0000003d;
+  height: 250px;
+}

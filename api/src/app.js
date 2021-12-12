@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const routes = require('./routes/index.js');  //aca importamos nuestros routers.
+const routes = require('./routes/index.js');  //aca importamos nuestro router 'padre'.
 const errorHandler = require('./utils/middlewares/errorHandler.js')
 const setHeaders = require('./utils/middlewares/setHeaders.js')
 require('./db.js');

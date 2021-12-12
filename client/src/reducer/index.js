@@ -6,6 +6,15 @@ const initialState = {
     detail:[]
 }
 
+// function SortedArr(order, uno, dos){
+//     //si recibo un order, lo ordeno de forma asc, sino de forma descendente..
+//     let sortedArr =[];
+//     order?
+//     state.recipes.sort(function(a,b){
+
+//     })
+// }
+
 export default function rootReducer(state= initialState, action){
     switch (action.type) {
         case 'GET_RECIPES':
@@ -16,13 +25,15 @@ export default function rootReducer(state= initialState, action){
             }
         case 'FILTER_BY_VALUE':
             const allRecipes = state.allRecipes;
-            const valueFiltered = allRecipes && allRecipes.filter(el=>el.type.includes(action.payload))
+            console.log(allRecipes.type)
+            const valueFiltered = allRecipes && allRecipes.filter(el=>el.type?.includes(action.payload))
             return{
                 ...state,
                 recipes: valueFiltered
 
             }
-        case 'ORDER_BY_NAME':           //y por puntuacion
+
+        case 'ORDER_BY_NAME':          
             let sortedArr = action.payload === 'asc' ?
             state.recipes.sort(function(a,b){
                 if(a.name > b.name){
@@ -70,6 +81,31 @@ export default function rootReducer(state= initialState, action){
                 ...state,
                 recipes : sortedAr
             }
+
+            case 'FILTER_BY_HEALTY':
+                const sortA = action.payload === 'Healty-Asc' ?
+                state.recipes.sort(function(a,b){
+                    if(a.healthyLevel> b.healthyLevel){
+                        return 1;
+                    }
+                    if(a.healthyLevel< b.healthyLevel){
+                        return -1;
+                    }
+                    return 0;
+                }) :
+                state.recipes.sort(function(a,b){
+                    if(a.healthyLevel< b.healthyLevel){
+                        return 1;
+                    }
+                    if(a.healthyLevel> b.healthyLevel){
+                        return -1;
+                    }
+                    return 0;
+                })
+                return{
+                    ...state,
+                    recipes:[...sortA]
+                }
         case 'GET_NAME_RECIPE':
             return{
                 ...state,

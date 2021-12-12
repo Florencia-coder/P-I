@@ -50,6 +50,13 @@ export function filterRecipesByTypes(payload){
     }
 }
 
+export function filterByHealty(payload){
+    return{
+        type:'FILTER_BY_HEALTY',
+        payload
+    }
+}
+
 export function orderByName(payload){
     return{
         type:'ORDER_BY_NAME',

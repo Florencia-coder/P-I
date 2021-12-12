@@ -7,14 +7,14 @@ export default function Paged({recipePerPage, allRecipes, Paginado}){
     for(let i=0 ; i< Math.ceil(allRecipes/recipePerPage); i++){
         pageNumbers.push(i+1)
     }
-    console.log(pageNumbers)
+    
     return(
-        <nav>
-            <ul>
+        <nav id='container-nav'>
+            <ul class="pagination">
                 {
                     pageNumbers.map((number)=>{
                         return(
-                            <li className='li' onClick={()=>Paginado(number)}>{number}</li>
+                            <li className='li' onClick={()=>Paginado(number)}><a href="#">{number}</a></li>
                         )
                     })
                 }

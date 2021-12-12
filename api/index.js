@@ -45,6 +45,8 @@ const { conn, Recipe } = require('./src/db.js');
 // }
 // })
 
+
+//Para aplicar los cambios en la base de datos lo sincronizamos.
 conn.sync({ force: false }).then(() => {
   console.log('Base de datos conectada. ')
   server.listen(5000, () => {

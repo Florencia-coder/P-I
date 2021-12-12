@@ -2,7 +2,19 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {Link, useHistory} from "react-router-dom";
 import { getTypesDiets, postRecipe } from "../actions";
+import Input from "./Input";
 import './recipeCreate.css'
+
+function validate(input){
+    let errors = {}
+    if(!input.name){
+        errors.name = 'Title is required';
+    }
+    if(!input.dishSummary){
+        errors.dishSummary = 'Dish Summary is required';
+    }
+    return errors
+}
 
 export default function RecipeCreate(){
     const dispatch = useDispatch();
@@ -18,10 +30,18 @@ export default function RecipeCreate(){
         typeDiets: []
     })
 
+    const [errors, setError] =useState({});
+    
     function handleChange(e){
-        setInput({
-            ...input,
-            [e.target.name] : e.target.value
+        setInput((input)=>{
+            const newInput={
+                ...input,
+                [e.target.name] : e.target.value
+            }
+            const errors = validate(newInput);
+            setError(errors);
+
+            return newInput
         })
     }
 
@@ -58,62 +78,57 @@ export default function RecipeCreate(){
         dispatch(getTypesDiets());
     },[]);
 
+
     return(
         <div id='container-create'>
-            <Link to='/home'><button>Back</button></Link>
-            <h1>Create Your Recipe!</h1>
-            <form onSubmit={e=>handleSubmit(e)}>
-                <div>
-                    <label>Name:</label>
-                    <input 
-                    type='text' 
-                    value={input.name} 
-                    name='name' 
-                    onChange={handleChange}
-                    />
-                </div>
 
-                <div>
-                    <label>Dish Summary:</label>
-                    <input 
-                    type='text' 
-                    value={input.dishSummary} 
-                    name='dishSummary' 
-                    onChange={handleChange}
-                    />
-                </div>
+            <Link to='/home'><button id='button-back'>x</button></Link>
 
-                <div>
-                    <label>Points:</label>
-                    <input 
-                    type='text' 
-                    value={input.points} 
-                    name='points' 
-                    onChange={handleChange}
-                    />
-                </div>
+            <h1 id='title'>¡Create Your Recipe!</h1>
 
-                <div>
-                    <label>Healthy Level:</label>
-                    <input 
-                    type='text' 
-                    value={input.healthyLevel} 
-                    name='healthyLevel' 
-                    onChange={handleChange}
-                    />
-                </div>
+            <form className='style-form' onSubmit={e=>handleSubmit(e)}>
+                <Input 
+                className={errors.name && "danger"}
+                nameLabel={'Name:'}
+                value={input.name}
+                name={'name'}
+                cb={e=>handleChange(e)}
+                />
+                {
+                    errors.name && <p className='error'>{errors.name}</p> 
+                }
 
-                <div>
-                    <label>Step By Step:</label>
-                    <input 
-                    type='text' 
-                    value={input.stepByStep} 
-                    name='stepByStep' 
-                    onChange={handleChange}
-                    />
-                </div>
+                <Input
+                className={errors.dishSummary && 'danger'}
+                nameLabel={'Dish Summary:'}
+                value={input.dishSummary} 
+                name={'dishSummary'} 
+                cb={e=>handleChange(e)}
+                />
+                {errors.dishSummary && <p className='error'>{errors.dishSummary}</p>}
 
-                <select onChange={e=>handleSelect(e)}>
+                <Input
+                nameLabel={'Points:'}
+                value={input.points}
+                name={'points'}
+                cb={e=>handleChange(e)}
+                />
+
+                <Input
+                nameLabel={'Healthy Level:'}
+                value={input.healthyLevel} 
+                name={'healthyLevel' }
+                cb={e=>handleChange(e)}
+                />
+
+                <Input
+                nameLabel={'Step By Step:'}
+                value={input.stepByStep} 
+                name={'stepByStep'} 
+                cb={e=>handleChange(e)}
+                />
+                <div id='select-style'>
+                <select id='select'onChange={e=>handleSelect(e)}>
                     {typediets.map(type=>{
                         return(
                         <option value={type.name}>{type.name}</option>
@@ -122,14 +137,16 @@ export default function RecipeCreate(){
                 </select>
                 {
                     input.typeDiets?.map(el=>
-                        <div>
-                            <p>{el}</p>
-                            <button onClick={()=>handleDelete(el)}>x</button>
+                        <div id='container-detailType'>
+                            <p id='style-type'>{el}</p>
+                            <button id='button-type' onClick={()=>handleDelete(el)}>x</button>
                         </div>
                     )
                 }
-                <button type='submit'>Create Recipe!</button>
+                </div>
+                <button id='button-create' disabled={Object.keys(errors).length ? true : false} type='submit'>Create Recipe!</button>
             </form>
         </div>
+
     )
 }
