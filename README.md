@@ -18,7 +18,6 @@ Para verificar que versión tienen instalada:
 > npm -v
 
 ### Como inicializar el SPA
-![home1](https://user-images.githubusercontent.com/86976757/147109223-8cbe6fa7-5d4c-42cc-8bf8-2ad490a80bc3.png)
 
 - Despues de haber descargado el repositorio(y teniendo en cuanta los requerimientos anteriores) instalar las dependencias correspondientes con el siguiente comando: 'npm install' sin comillas.
 - luego dentro de la carpeta api ejecutar el comando: npm start
@@ -34,7 +33,7 @@ Aca podemos ver el home del proyecto, donde tenemos las opciones de filtrado, cr
 <img src='https://github.com/Florencia2022/P-I/blob/master/img/home2.png'/>
 
 
-## Busqueda
+## Búsqueda
 
 
 ## Creación de receta
