@@ -6,7 +6,7 @@ const { Recipe, Type } = require ('../db');
 const typesRouter = require('./typesRouter.js');
 const recipeRouter = require('./recipeRouter');
 
-APIKEY = `https://api.spoonacular.com/recipes/complexSearch?apiKey=25771101e23a4a109d5eacaec7b6526b&number=5&addRecipeInformation=true`
+APIKEY = `https://api.spoonacular.com/recipes/complexSearch?apiKey=25771101e23a4a109d5eacaec7b6526b&number=100&addRecipeInformation=true`
 
 
 router.use( '/types', typesRouter );
