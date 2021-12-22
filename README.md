@@ -1,9 +1,7 @@
 # Project - Food
 
 ## Resumen:
-Desarrolle una SPA(Single Page Application) utilizando React para el Front End y Redux como state management. Todos los componentes fueron desarrollados con CSS sin librerías adicionales.
-La SPA consume datos de una API, a través del Back End desarrollado en NodeJS, utilizando Express, agregando nuevas funcionalidades a la API original.
-Adicionalmente,trabajé con Sequelize en una base de datos, que creé y configuré previamente utilizando PostgreSQL para el agregado de nuevas “recetas”.
+LA siguiente SPA es de recetas de comidas, donde se pueden apreciar ordenamientos por nombre, puntaje, filtros por tipo de dieta, etc. A continuación estan las instrucciones para poder correrlo, y seguidamente agrege un poco de vista grafica sobre el proyecto.
 
 ### ¿Como levantar la SPA?
 
@@ -20,15 +18,20 @@ Para verificar que versión tienen instalada:
 > npm -v
 
 ### Como inicializar el SPA
+![home1](https://user-images.githubusercontent.com/86976757/147109223-8cbe6fa7-5d4c-42cc-8bf8-2ad490a80bc3.png)
 
 - Despues de haber descargado el repositorio(y teniendo en cuanta los requerimientos anteriores) instalar las dependencias correspondientes con el siguiente comando: 'npm install' sin comillas.
 - luego dentro de la carpeta api ejecutar el comando: npm start
 - en la carpeta client ejecutar el mismo comando: npm start
 
 ## Inicio
-
+Este landingpage es el que nos permite acceder al home.
+<img src='https://github.com/Florencia2022/P-I/blob/master/img/landingpage.png'/>
 
 ## Recetas
+Aca podemos ver el home del proyecto, donde tenemos las opciones de filtrado, creación de recetas, busqueda por nombre, paginación cada diez recetas, distintos tipos de recetas con sus respectivos detalles, etc.
+<img src='https://github.com/Florencia2022/P-I/blob/master/img/home1.png'/>
+<img src='https://github.com/Florencia2022/P-I/blob/master/img/home2.png'/>
 
 
 ## Busqueda
