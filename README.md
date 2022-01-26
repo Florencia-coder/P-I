@@ -34,10 +34,17 @@ Aca podemos ver el home del proyecto, donde tenemos las opciones de filtrado, cr
 
 
 ## Búsqueda
+En el searchBar, podemos buscar a las recetas por nombre, sin que importen las mayusculas o minusculas.
+<img src='https://github.com/Florencia2022/P-I/blob/master/img/searchBar.png'/>
 
 
 ## Creación de receta
+Al crear una receta, se verifica que no falten los campos importantes,caso contrario no deja crear a la receta y tambien tenemos la posibilidad de eliminar algún tipo de dieta agregado que ya no querramos.
+
+<img src='https://github.com/Florencia2022/P-I/blob/master/img/createRecipe.png'/>
+<img src='https://github.com/Florencia2022/P-I/blob/master/img/recipeCreateClick.png'/>
 
 
 ### Detalle de receta
-
+Al clickear una receta,podemos ver el detalle de la misma con todas sus caracteristicas. Si en la receta creada no le agregamos imagen, la SPA le agregara una por default.
+<img src='https://github.com/Florencia2022/P-I/blob/master/img/detailRecipe.png'/>
