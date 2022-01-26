@@ -45,6 +45,6 @@ Al crear una receta, se verifica que no falten los campos importantes,caso contr
 <img src='https://github.com/Florencia2022/P-I/blob/master/img/recipeCreateClick.png'/>
 
 
-### Detalle de receta
+## Detalle de receta
 Al clickear una receta,podemos ver el detalle de la misma con todas sus caracteristicas. Si en la receta creada no le agregamos imagen, la SPA le agregara una por default.
 <img src='https://github.com/Florencia2022/P-I/blob/master/img/detailRecipe.png'/>
